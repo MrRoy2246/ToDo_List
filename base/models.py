@@ -8,6 +8,7 @@ class Task(models.Model):
     description=models.TextField(null=True,blank=True)
     complete=models.BooleanField(default=False)
     create=models.DateTimeField(auto_now_add=True)
+    is_deleted = models.BooleanField(default=False)  # New field to track deletion status
 
 
     def __str__(self):
